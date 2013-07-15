@@ -1,0 +1,449 @@
+[Header]
+MagicCookie={0b13fe8c-dfe0-40eb-8900-6712719559a7}
+Version=1.0
+[File000]
+Location=C:\Users\ronf\Research\development\roach\obj\delay.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={DE18EB1A-B46B-486B-B96F-A811A635DFAC}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-as.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g
+TraceCmdString=
+DebugOptions=--defsym=__DEBUG=1 --defsym=__MPLAB_DEBUGGER_ICD3=1
+[File001]
+Location=C:\Users\ronf\Research\development\roach\obj\dfmem.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File002]
+Location=C:\Users\ronf\Research\development\roach\obj\i2c_driver.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File003]
+Location=C:\Users\ronf\Research\development\roach\obj\init_default.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File004]
+Location=C:\Users\ronf\Research\development\roach\obj\larray.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File005]
+Location=C:\Users\ronf\Research\development\roach\obj\mpu6000.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File006]
+Location=C:\Users\ronf\Research\development\roach\obj\packet_queue.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File007]
+Location=C:\Users\ronf\Research\development\roach\obj\payload.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File008]
+Location=C:\Users\ronf\Research\development\roach\obj\payload_queue.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File009]
+Location=C:\Users\ronf\Research\development\roach\obj\queue.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File010]
+Location=C:\Users\ronf\Research\development\roach\obj\radio.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File011]
+Location=C:\Users\ronf\Research\development\roach\obj\spi_controller.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File012]
+Location=C:\Users\ronf\Research\development\roach\obj\tih.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File013]
+Location=C:\Users\ronf\Research\development\roach\obj\version.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File014]
+Location=C:\Users\ronf\Research\development\roach\obj\adc_pid.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File015]
+Location=C:\Users\ronf\Research\development\roach\obj\ams-enc.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File016]
+Location=C:\Users\ronf\Research\development\roach\obj\battery.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File017]
+Location=C:\Users\ronf\Research\development\roach\obj\blink.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File018]
+Location=C:\Users\ronf\Research\development\roach\obj\carray.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File019]
+Location=C:\Users\ronf\Research\development\roach\obj\sclock.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File020]
+Location=C:\Users\ronf\Research\development\roach\obj\at86rf231_driver.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File021]
+Location=C:\Users\ronf\Research\development\roach\obj\mac_packet.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File022]
+Location=C:\Users\ronf\Research\development\roach\obj\ppool.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File023]
+Location=C:\Users\ronf\Research\development\roach\obj\init.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File024]
+Location=C:\Users\ronf\Research\development\roach\obj\interrupts.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File025]
+Location=C:\Users\ronf\Research\development\roach\obj\tests.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File026]
+Location=C:\Users\ronf\Research\development\roach\obj\pid-ip2.5.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File027]
+Location=C:\Users\ronf\Research\development\roach\obj\uart_driver.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File028]
+Location=C:\Users\ronf\Research\development\roach\obj\cmd.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File029]
+Location=C:\Users\ronf\Research\development\roach\obj\main.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File030]
+Location=C:\Users\ronf\Research\development\roach\obj\telem.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File031]
+Location=C:\Users\ronf\Research\development\roach\obj\traps.o
+Folder=Intermediary
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={069BD372-6CA0-40D4-BF2F-5DC806D05083}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=-g -Wall -D__IMAGEPROC2 -DPID_HARDWARE
+TraceCmdString=
+DebugOptions=-D__DEBUG -D__MPLAB_DEBUGGER_ICD3=1
+[File032]
+Location=C:\Users\ronf\Research\development\roach\roach-ip25.cof
+Folder=Output
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={433C3D55-811D-409D-A6BF-159CF9355B42}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=--heap=4096 --stack=256 -Map="$(BINDIR_)$(TARGETBASE).map" --report-mem -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -ldsp-coff
+TraceCmdString=
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_ICD3=1 --defsym=__ICD2RAM=1
+[File033]
+Location=C:\Users\ronf\Research\development\roach\roach-ip25.hex
+Folder=Output
+DeviceName=dsPIC33FJ128MC706A
+LanguageToolSuiteID={479DDE59-4D56-455E-855E-FFF59A3DB57E}
+LanguageToolID={433C3D55-811D-409D-A6BF-159CF9355B42}
+LanguageToolLocation=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-ld.exe
+PPAD=$(BINDIR)||$(TMPDIR)|.\obj||$(AINDIR)||$(INCDIR)|.\lib;.\firmware\source;..\imageproc-lib||$(LIBDIR)||$(LKRDIR)||
+SOLK=<src>|..\imageproc-lib\delay.s|..\imageproc-lib\dfmem.c|..\imageproc-lib\i2c_driver.c|..\imageproc-lib\init_default.c|..\imageproc-lib\larray.c|..\imageproc-lib\mpu6000.c|..\imageproc-lib\packet_queue.c|..\imageproc-lib\payload.c|..\imageproc-lib\payload_queue.c|..\imageproc-lib\queue.c|..\imageproc-lib\radio.c|..\imageproc-lib\spi_controller.c|..\imageproc-lib\tih.c|..\imageproc-lib\version.c|..\imageproc-lib\adc_pid.c|..\imageproc-lib\ams-enc.c|..\imageproc-lib\battery.c|..\imageproc-lib\blink.c|..\imageproc-lib\carray.c|..\imageproc-lib\sclock.c|..\imageproc-lib\at86rf231_driver.c|..\imageproc-lib\mac_packet.c|..\imageproc-lib\ppool.c|lib\init.c|lib\interrupts.c|lib\tests.c|lib\pid-ip2.5.c|..\imageproc-lib\uart_driver.c|firmware\source\cmd.c|firmware\source\main.c|lib\telem.c|lib\traps.c||<obj>||<lib>||<lkr>||
+SuiteArgsString=
+ToolArgsString=--heap=4096 --stack=256 -Map="$(BINDIR_)$(TARGETBASE).map" --report-mem -o"$(BINDIR_)$(TARGETBASE).$(TARGETSUFFIX)" -ldsp-coff
+TraceCmdString=
+DebugOptions=--defsym=__MPLAB_DEBUG=1 --defsym=__MPLAB_DEBUGGER_ICD3=1 --defsym=__ICD2RAM=1
+[TOOL_LOC_STAMPS]
+tool_loc{DE18EB1A-B46B-486B-B96F-A811A635DFAC}=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-as.exe
+tool_loc{069BD372-6CA0-40D4-BF2F-5DC806D05083}=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-gcc.exe
+tool_loc{433C3D55-811D-409D-A6BF-159CF9355B42}=C:\Program Files (x86)\Microchip\MPLAB C30\bin\pic30-ld.exe
