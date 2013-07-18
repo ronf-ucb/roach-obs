@@ -115,7 +115,7 @@ void telemReadbackSamples(unsigned long numSamples) {
 
 //Saves telemetry data structure into flash memory, in order
 
-void telemSaveData(telemStruct_t * telemPkt) {
+void telemSaveData(telemStruct_t *telemPkt) {
 
     //Write the packet header info to the DFMEM
     dfmemSave((unsigned char*) telemPkt, sizeof(telemStruct_t));

@@ -39,6 +39,7 @@ extern telemStruct_t telemPIDdata;
 -----------------------------------------------------------------------------*/
 static unsigned char cmdNop(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdEcho(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
+static unsigned char cmdSoftwareReset(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdWhoAmI(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdGetAMSPos(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 
@@ -71,6 +72,7 @@ void cmdSetup(void) {
     cmd_func[CMD_TEST_RADIO] = &test_radio;
     cmd_func[CMD_TEST_MPU] = &test_mpu;
     cmd_func[CMD_ECHO] = &cmdEcho;
+    cmd_func[CMD_SOFTWARE_RESET] = &cmdSoftwareReset;
     cmd_func[CMD_SET_THRUST_OPEN_LOOP] = &cmdSetThrustOpenLoop;
     cmd_func[CMD_SET_THRUST_CLOSED_LOOP] = &cmdSetThrustClosedLoop;
     cmd_func[CMD_PID_START_MOTORS] = &cmdPIDStartMotors;
@@ -112,6 +114,10 @@ unsigned char cmdEcho(unsigned char type, unsigned char status, unsigned char le
     return 1; //success
 }
 
+unsigned char cmdSoftwareReset(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame) 
+{     	asm volatile("reset");
+	return 1;
+}
 
 // send robot info when queried
 unsigned char cmdWhoAmI(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame) {
@@ -215,14 +221,14 @@ unsigned char cmdSetThrustOpenLoop(unsigned char type, unsigned char status, uns
 
 unsigned char cmdSetThrustClosedLoop(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame) {
     int thrust1 = frame[0] + (frame[1] << 8);
-    unsigned int run_time_ms1 = frame[2] + (frame[2] << 8);
+    unsigned int run_time_ms1 = frame[2] + (frame[3] << 8);
     int thrust2 = frame[4] + (frame[5] << 8);
     unsigned int run_time_ms2 = frame[6] + (frame[7] << 8);
 
 	pidSetInput(0 ,thrust1, run_time_ms1);
-	pidOn(0);
+	pidOn(0); 
 	pidSetInput(1 ,thrust2, run_time_ms2);
-	pidOn(1);
+	pidOn(1); 
 	pidStartTimedTrial(run_time_ms1,run_time_ms2);
        return 1;
  } 

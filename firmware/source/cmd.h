@@ -12,6 +12,7 @@
 #define CMD_SET_PID_GAINS  			0x82
 #define CMD_GET_PID_TELEMETRY		0x83
 #define CMD_GET_AMS_POS				0x84
+#define CMD_SOFTWARE_RESET          0x88
 #define CMD_SPECIAL_TELEMETRY       0x89
 #define CMD_ERASE_SECTORS			0x8A 
 #define CMD_FLASH_READBACK          0x8B 

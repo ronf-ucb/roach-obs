@@ -220,7 +220,8 @@ void pidSetGains(int pid_num, int Kp, int Ki, int Kd, int Kaw, int ff){
 
 void pidOn(int pid_num){
 	pidObjs[pid_num].onoff = 1;
-	t1_ticks = 0;
+	pidObjs[pid_num].timeFlag = 1; // DUNCAN did not have
+/*	t1_ticks = 0; DUNCAN */
 }
 
 // zero position setpoint for both motors (avoids big offset errors)
@@ -326,19 +327,17 @@ void __attribute__((interrupt, no_auto_psv)) _T1Interrupt(void) {
         pidGetState();	// always update state, even if motor is coasting
         for (j = 0; j< NUM_PIDS; j++) {
         // only update tracking setpoint if time has not yet expired
-            if (pidObjs[j].onoff) {
-                if (pidObjs[j].timeFlag){
-                    if (pidObjs[j].start_time + pidObjs[j].run_time >= t1_ticks){
-                        pidGetSetpoint(j);
-                    }
-                    if(t1_ticks > lastMoveTime){ // turn off if done running all legs
-                        pidObjs[0].onoff = 0;
+            if (pidObjs[j].onoff) 
+           {   if (pidObjs[j].timeFlag)
+		 { if (pidObjs[j].start_time + pidObjs[j].run_time >= t1_ticks)
+		      {   pidGetSetpoint(j); }
+                     if(t1_ticks > lastMoveTime) // turn off if done running all legs
+                     {   pidObjs[0].onoff = 0;
                         pidObjs[1].onoff = 0;
-                    } 
+                     } 
                 } 
-                else {                 
-                    pidGetSetpoint(j);
-                }
+                else 
+	         {  pidGetSetpoint(j); }
             }
         }
         pidSetControl();
