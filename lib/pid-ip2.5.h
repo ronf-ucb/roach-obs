@@ -74,8 +74,8 @@ void initPIDVelProfile();
 void setPIDVelProfile(int pid_num, int *interval, int *delta, int *vel);
 void initPIDObjPos(pidPos *pid, int Kp, int Ki, int Kd, int Kaw, int ff);
 //void SetupTimer1(void);
-void pidStartTimedTrial(unsigned int run_time);
-void pidSetInput(int pid_num, int input_val);
+void pidStartTimedTrial(unsigned int run_time1, unsigned int run_time2);
+void pidSetInput(int pid_num, int input_val, unsigned int run_time);
 void pidSetGains(int pid_num, int Kp, int Ki, int Kd, int Kaw, int ff);
 void pidGetState(); // update state vector from bemf and Hall angle
 void pidGetSetpoint(int j);

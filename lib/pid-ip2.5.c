@@ -83,8 +83,8 @@ void pidSetup()
 
 	lastMoveTime = 0;
 //  initialize PID structures before starting Timer1
-	pidSetInput(0,0);
-	pidSetInput(1,0);
+	pidSetInput(0,0,0);
+	pidSetInput(1,0,0);
 	
 	EnableIntT1; // turn on pid interrupts
 
@@ -164,12 +164,14 @@ void initPIDObjPos(pidPos *pid, int Kp, int Ki, int Kd, int Kaw, int ff)
 
 
 // called from set thrust closed loop, etc. Thrust 
-void pidSetInput(int pid_num, int input_val){
+void pidSetInput(int pid_num, int input_val,unsigned int run_time ){
 unsigned long temp;	
 /*      ******   use velocity setpoint + throttle for compatibility between Hall and Pullin code *****/
 /* otherwise, miss first velocity set point */
     pidObjs[pid_num].v_input = input_val + (int)(( (long)pidVel[pid_num].vel[0] * K_EMF) >> 8);	//initialize first velocity ;
-    pidObjs[pid_num].start_time = t1_ticks;
+	pidObjs[pid_num].run_time = run_time;	
+	temp = t1_ticks;
+	pidObjs[pid_num].start_time = temp; // not atomic!
     //zero out running PID values
     pidObjs[pid_num].i_error = 0;
     pidObjs[pid_num].p = 0;
@@ -194,12 +196,13 @@ unsigned long temp;
 
 }
 
-void pidStartTimedTrial(unsigned int run_time){
+void pidStartTimedTrial(unsigned int run_time1, unsigned int run_time2){
     unsigned long temp;
-
+	unsigned int run_time;
+  run_time = (run_time1 > run_time2) ? run_time1 : run_time2;
     temp = t1_ticks;  // need atomic read due to interrupt  
-    pidObjs[0].run_time = run_time;
-    pidObjs[1].run_time = run_time;
+    pidObjs[0].run_time = run_time1;
+    pidObjs[1].run_time = run_time2;
     pidObjs[0].start_time = temp;
     pidObjs[1].start_time = temp;
     if ((temp + (unsigned long) run_time) > lastMoveTime)
@@ -286,8 +289,8 @@ void calibBatteryOffset(int spindown_ms){
 /*****************************************************************************************/
 void EmergencyStop(void)
 {
-	pidSetInput(0, 0);
-	pidSetInput(1, 0);
+	pidSetInput(0, 0,0);
+	pidSetInput(1, 0,0);
 	DisableIntT1; // turn off pid interrupts
        SetDCMCPWM(MC_CHANNEL_PWM1, 0, 0);    // set PWM to zero
        SetDCMCPWM(MC_CHANNEL_PWM2, 0, 0); 

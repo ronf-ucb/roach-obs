@@ -40,8 +40,10 @@ void telemGetPID(){
 
     telemPIDdata.posL = pidObjs[0].p_state;
     telemPIDdata.posR = pidObjs[1].p_state;
+/*   DUNCAN 
     telemPIDdata.composL = pidObjs[0].p_input  + pidObjs[0].interpolate;
     telemPIDdata.composR = pidObjs[1].p_input  + pidObjs[1].interpolate;
+*/
     telemPIDdata.dcL = pidObjs[0].output; // left
     telemPIDdata.dcR = pidObjs[1].output; // right
     telemPIDdata.bemfL = bemf[0];
@@ -53,11 +55,12 @@ void telemGetPID(){
     telemPIDdata.gyroX = gdata[0];
     telemPIDdata.gyroY = gdata[1];
     telemPIDdata.gyroZ = gdata[2];
+    telemPIDdata.gyroAvg = gdata[2]; //*ADDED *
     telemPIDdata.accelX = xldata[0];
     telemPIDdata.accelY = xldata[1];
     telemPIDdata.accelZ = xldata[2];
     telemPIDdata.Vbatt = (int) adcGetVbatt();
-
+    telemPIDdata.sOut = 0; // steering
     // Save Data to flash
     if (samplesToSave > 0) {
         telemPIDdata.timestamp = sclockGetTime() - telemStartTime;
@@ -85,7 +88,9 @@ void telemSetSamplesToSave(unsigned long n) {
 
 void telemSendDataDelay(telemStruct_t* sample) {
 
-    radioSendData(RADIO_DEST_ADDR, 0, CMD_FLASH_READBACK, telemPacketSize,
+   // radioSendData(RADIO_DEST_ADDR, 0, CMD_FLASH_READBACK, telemPacketSize,
+         //  (unsigned char*) sample, 0 );
+	radioSendData(RADIO_DEST_ADDR, 0, CMD_SPECIAL_TELEMETRY, telemPacketSize,
            (unsigned char*) sample, 0 );
     LED_2 = ~LED_2;
 }

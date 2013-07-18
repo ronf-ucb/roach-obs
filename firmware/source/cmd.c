@@ -31,16 +31,20 @@ void cmdError(void);
 extern pidPos pidObjs[NUM_PIDS];
 extern EncObj encPos[NUM_ENC];
 extern volatile CircArray fun_queue;
+unsigned long packetNum = 0; // sequential packet number
+extern telemStruct_t telemPIDdata; 
 
 /*-----------------------------------------------------------------------------
  *          Declaration of static functions
 -----------------------------------------------------------------------------*/
 static unsigned char cmdNop(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
+static unsigned char cmdEcho(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdWhoAmI(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdGetAMSPos(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 
 //Motor and PID functions
 static unsigned char cmdSetThrustOpenLoop(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
+static unsigned char cmdSetThrustClosedLoop(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdSetPIDGains(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdPIDStartMotors(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdPIDStopMotors(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
@@ -48,6 +52,7 @@ static unsigned char cmdSetVelProfile(unsigned char type, unsigned char status, 
 static unsigned char cmdZeroPos(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 
 //Experiment/Flash Commands
+static unsigned char cmdGetPIDTelemetry(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdStartTimedRun(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdStartTelemetry(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
 static unsigned char cmdEraseSectors(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame);
@@ -65,7 +70,9 @@ void cmdSetup(void) {
     }
     cmd_func[CMD_TEST_RADIO] = &test_radio;
     cmd_func[CMD_TEST_MPU] = &test_mpu;
+    cmd_func[CMD_ECHO] = &cmdEcho;
     cmd_func[CMD_SET_THRUST_OPEN_LOOP] = &cmdSetThrustOpenLoop;
+    cmd_func[CMD_SET_THRUST_CLOSED_LOOP] = &cmdSetThrustClosedLoop;
     cmd_func[CMD_PID_START_MOTORS] = &cmdPIDStartMotors;
     cmd_func[CMD_SET_PID_GAINS] = &cmdSetPIDGains;
     cmd_func[CMD_GET_AMS_POS] = &cmdGetAMSPos;
@@ -77,6 +84,8 @@ void cmdSetup(void) {
     cmd_func[CMD_ZERO_POS] = &cmdZeroPos;   
     cmd_func[CMD_START_TIMED_RUN] = &cmdStartTimedRun;
     cmd_func[CMD_PID_STOP_MOTORS] = &cmdPIDStopMotors;
+// *ADDED*
+    cmd_func[CMD_GET_PID_TELEMETRY] = cmdGetPIDTelemetry;
 
 }
 
@@ -96,6 +105,13 @@ void cmdPushFunc(MacPacket rx_packet) {
         }
     }
 }
+
+// simple echo response
+unsigned char cmdEcho(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame) 
+{       radioSendData(RADIO_DEST_ADDR, status, CMD_ECHO, length, frame,0);
+    return 1; //success
+}
+
 
 // send robot info when queried
 unsigned char cmdWhoAmI(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame) {
@@ -133,12 +149,12 @@ unsigned char cmdStartTimedRun(unsigned char type, unsigned char status, unsigne
     int i;
     for (i = 0; i < NUM_PIDS; i++){
         pidObjs[i].timeFlag = 1;
-        pidSetInput(i, 0);
+        pidSetInput(i, 0,run_time);
         pidObjs[i].p_input = pidObjs[i].p_state;
         pidOn(i);
     }
 
-    pidStartTimedTrial(run_time);
+    pidStartTimedTrial(run_time,run_time);
 
     return 1;
 }
@@ -162,6 +178,20 @@ unsigned char cmdFlashReadback(unsigned char type, unsigned char status, unsigne
     return 1;
 }
 
+unsigned char cmdGetPIDTelemetry(unsigned char type, unsigned char status, unsigned char length,unsigned char *frame)
+{ unsigned int sampLen = sizeof(telemStruct_t);
+	telemGetPID(); // get current state
+	telemPIDdata.sampleIndex = packetNum;
+	radioSendData(RADIO_DEST_ADDR, status, CMD_SPECIAL_TELEMETRY, 
+					sampLen, (unsigned char *) &telemPIDdata,0);
+
+	packetNum++;
+	LED_GREEN = ~ LED_GREEN;
+	LED_RED = ~ LED_RED;
+	LED_BLUE = ~LED_BLUE;
+	return 1;
+}
+
 // ==== Motor PID Commands =====================================================================================
 // =============================================================================================================
 
@@ -180,6 +210,21 @@ unsigned char cmdSetThrustOpenLoop(unsigned char type, unsigned char status, uns
 
     EnableIntT1;
     return 1;
+ } 
+
+
+unsigned char cmdSetThrustClosedLoop(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame) {
+    int thrust1 = frame[0] + (frame[1] << 8);
+    unsigned int run_time_ms1 = frame[2] + (frame[2] << 8);
+    int thrust2 = frame[4] + (frame[5] << 8);
+    unsigned int run_time_ms2 = frame[6] + (frame[7] << 8);
+
+	pidSetInput(0 ,thrust1, run_time_ms1);
+	pidOn(0);
+	pidSetInput(1 ,thrust2, run_time_ms2);
+	pidOn(1);
+	pidStartTimedTrial(run_time_ms1,run_time_ms2);
+       return 1;
  } 
 
  unsigned char cmdSetPIDGains(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame) {
@@ -251,10 +296,10 @@ unsigned char cmdSetVelProfile(unsigned char type, unsigned char status, unsigne
 unsigned char cmdPIDStartMotors(unsigned char type, unsigned char status, unsigned char length, unsigned char *frame) {
     pidObjs[0].timeFlag = 0;
     pidObjs[1].timeFlag = 0;
-    pidSetInput(0, 0);
+    pidSetInput(0, 0,0);
     pidObjs[0].p_input = pidObjs[0].p_state;
     pidOn(0);
-    pidSetInput(1, 0);
+    pidSetInput(1, 0,0);
     pidObjs[1].p_input = pidObjs[1].p_state;
     pidOn(1);
     return 1;
@@ -271,7 +316,7 @@ unsigned char cmdZeroPos(unsigned char type, unsigned char status, unsigned char
     motor_count[0] = pidObjs[0].p_state;
     motor_count[1] = pidObjs[1].p_state;
 
-    radioSendData(RADIO_DEST_ADDR, status, CMD_GET_AMS_POS,
+    radioSendData(RADIO_DEST_ADDR, status, CMD_ZERO_POS,
         sizeof(motor_count), (unsigned char *)motor_count, 0);
     pidZeroPos(0); pidZeroPos(1);
     return 1;
